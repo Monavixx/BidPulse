@@ -9,6 +9,7 @@ public class User : AggregateRoot
     public Username Username { get; private set; } = null!;
     public EmailAddress EmailAddress { get; private set; } = null!;
     public byte[] PasswordHash { get; private set; } = null!;
+    public DateOnly Birthday { get; private set; }
 
     public static Result<User> Create(string username, string emailAddress)
     {
